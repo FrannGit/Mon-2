@@ -1,0 +1,100 @@
+/* Color naranja de MON: #f7941e*/
+
+body{
+    margin:0;
+    font-family: kanit;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll; /* Asegura que se pueda desplazar */
+}
+/* Ocultar la barra de scroll para navegadores modernos */
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari y Edge */
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+}
+
+/*---------------------------------- Presentacion de la página ----------------------------------*/
+
+/*Imagen de fondo*/
+.header__presentation{
+    background-image: url(Imgs/Turnos.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: bottom;
+}
+
+/*Filtro naranja transparente, será el que contenga a los elementos de la presentación*/
+.presentation__filter{
+    background-color: #f7941e95;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fefaf6;
+    box-shadow: 0 0 10px #e68c20;
+}
+
+/*Bloque de Logo y nombre de MON*/
+.mon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*El contenedor de la imagen para ajustar su tamaño facilmente*/
+.logo__container{
+    height: 13rem;
+    width: 13rem;
+}
+/*La imagen se ajusta a todo su contenedor*/
+.header__logo{
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 7px #ec8d1d);
+}
+.header__title{
+    font-size: 3.8rem;
+    font-weight: 400;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+/*Flechas laterales que indican al usuario que debe bajar*/
+.flechas{
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+}
+
+.arrow__img{
+    filter: drop-shadow(0 0 4px #aaa);
+}
+
+
+@media screen and (max-width: 480px){
+    .flechas{
+        display: none;
+    }
+    .logo__container{
+        height: 10rem;
+        width: 10rem;
+    }
+}
+
+/*---------------------------------- Barra de navegación principal ----------------------------------*/
+
+.nav__list{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    background: linear-gradient(to bottom, #cfc2b1, #dfd0bc);;
+}
+
+.search__item{
+    border: 1px solid #f7941e;  
+    border-radius: 30px;
+}
