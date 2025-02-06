@@ -14,43 +14,100 @@
     <title>Centro Diagnóstico Mon</title>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
-        
-        <div class="header__presentation">
-            <div class="presentation__filter">
-                <div class="flechas">
-                    <img src="Imgs/flechas.png" class="arrow__img">
-                    <img src="Imgs/flechas.png" class="arrow__img">
-                    <img src="Imgs/flechas.png" class="arrow__img">
-                    <img src="Imgs/flechas.png" class="arrow__img">
+        <!-- Contenedor para filtro -->
+        <div class="presentation__filter">
+            <div class="flechas">
+                <img src="Imgs/flechas.png" class="arrow__img">
+                <img src="Imgs/flechas.png" class="arrow__img">
+                <img src="Imgs/flechas.png" class="arrow__img">
+                <img src="Imgs/flechas.png" class="arrow__img">
+            </div>
+            <div class="mon">
+                <div class="logo__container">
+                    <img src="Imgs/logo.png" alt="Logo Mon" class="header__logo">
                 </div>
-                <div class="mon">
-                    <div class="logo__container">
-                        <img src="Imgs/logo.png" alt="Logo Mon" class="header__logo">
-                    </div>
-                    <h1 class="header__title">Centro Diagnóstico Mon</h1>
-                </div>
-                <div class="flechas">
-                    <img src="Imgs/flechas.png" class="arrow__img">
-                    <img src="Imgs/flechas.png" class="arrow__img">
-                    <img src="Imgs/flechas.png" class="arrow__img">
-                    <img src="Imgs/flechas.png" class="arrow__img">
-                </div>
+                <h1 class="header__title">Centro Diagnóstico Mon</h1>
+            </div>
+            <div class="flechas">
+                <img src="Imgs/flechas.png" class="arrow__img">
+                <img src="Imgs/flechas.png" class="arrow__img">
+                <img src="Imgs/flechas.png" class="arrow__img">
+                <img src="Imgs/flechas.png" class="arrow__img">
             </div>
         </div>
-        
-        <nav class="header__nav">
-            <!-- Lista de elementos del nav -->
-            <ul class="nav__list">
-                <li class="nav__item">Portal Pacientes</li>
-                <li class="nav__item">Servicios</li>
-                <li class="nav__item">Pacientes</li>
-                <li class="nav__item">Equipos</li>
-                <li class="nav__item">Nosotros</li>
-                <li class="nav__item">Médicos</li>
-                <li class="nav__item"><input class="search__item" type="text" placeholder="🔍Buscar"></li>
-            </ul>
-        </nav>
+    </div>
     </header>
+
+    <!-- Nav principal -->
+    <nav class="header__nav">
+        <!-- Lista de elementos del nav -->
+        <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#">Portal Pacientes</a></li>
+            <li class="nav__item">
+                <details class="details">
+                    <summary class="summary">Servicios</summary>
+                    <ul class="details__list">
+                        <li class="details__item"><a class="item__link" href="#">Resonancia Magnética</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Tomografía Computada Multicorte</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Mamografía digital por Tomosíntesis</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Ecografía</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Obstetricia</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Radiología Digital</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Densitometría Ósea</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Intervencionismo</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li class="nav__item">
+                <details class="details">
+                    <summary class="summary">Pacientes</summary>
+                    <ul class="details__list">
+                        <li class="details__item"><a class="item__link" href="#">Guía para el paciente</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Servicio de WhatsApp</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Pacientes del interior</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Obras sociales, prepagas y A.R.T.</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Vigencias de Ordenes Médicas</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Equipos</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Contacto</a></li>
+            <li class="nav__item">
+                <details class="details">
+                    <summary class="summary">Nosotros</summary>
+                    <ul class="details__list">
+                        <li class="details__item"><a class="item__link" href="#">Ubicación</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Historia</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Institucional</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Nuestro espacio</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Trabajá con nosotros</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Política de Calidad</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Política ambiental</a></li>
+                        <li class="details__item"><a class="item__link" href="#">Certificaciones</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Médicos</a></li>
+            <li class="nav__item">
+                <div class="search__container">
+                    <input type="text" placeholder="Buscar" class="search__input">
+                    <button class="search__button"><img class="search__img" src="Imgs/icon-zoom.svg" alt="Buscar"></button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <main class="main">
+        <!-- Seccion de servicios -->
+        <section class="services">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.
+            ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipis
+            ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipis
+            ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, sint. Non voluptatum autem rerum magni doloribus consequatur amet ea inventore veniam dolores illo natus, minus, beatae ratione aliquid tempora minima.Lorem ipsum dolor, sit amet consectetur adipis
+        </section>
+    </main>
 </body>
 </html>

@@ -1,100 +1,229 @@
 /* Color naranja de MON: #f7941e*/
 
 body{
-    margin:0;
-    font-family: kanit;
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll; /* Asegura que se pueda desplazar */
-}
-/* Ocultar la barra de scroll para navegadores modernos */
-body::-webkit-scrollbar {
-    display: none; /* Chrome, Safari y Edge */
+  margin:0;
+  font-family: kanit;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll; /* Asegura que se pueda desplazar*/
 }
 
-.header{
-    display: flex;
-    flex-direction: column;
+/* Ocultar la barra de scroll para navegadores modernos */
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Edge */
 }
+
 
 /*---------------------------------- Presentacion de la página ----------------------------------*/
 
-/*Imagen de fondo*/
-.header__presentation{
-    background-image: url(Imgs/Turnos.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: bottom;
+.header{
+  background-image: url(Imgs/Turnos.jpg);
+  flex-basis: 100vh;
+  background-size: cover;
+  background-position: bottom;
 }
 
 /*Filtro naranja transparente, será el que contenga a los elementos de la presentación*/
 .presentation__filter{
-    background-color: #f7941e95;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fefaf6;
-    box-shadow: 0 0 10px #e68c20;
+  background-color: #f7941e95;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fefaf6;
 }
 
 /*Bloque de Logo y nombre de MON*/
 .mon{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 /*El contenedor de la imagen para ajustar su tamaño facilmente*/
 .logo__container{
-    height: 13rem;
-    width: 13rem;
+  height: 13rem;
+  width: 13rem;
 }
 /*La imagen se ajusta a todo su contenedor*/
 .header__logo{
-    width: 100%;
-    height: 100%;
-    filter: drop-shadow(0 0 7px #ec8d1d);
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 7px #ec8d1d);
 }
 .header__title{
-    font-size: 3.8rem;
-    font-weight: 400;
-    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
-    text-align: center;
+  font-size: 3.8rem;
+  font-weight: 400;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+  text-align: center;
 }
 
 /*Flechas laterales que indican al usuario que debe bajar*/
 .flechas{
-    display: flex;
-    flex-direction: column;
-    margin: 0 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
 }
 
 .arrow__img{
-    filter: drop-shadow(0 0 4px #aaa);
+  filter: drop-shadow(0 0 4px #888);
 }
 
 
 @media screen and (max-width: 480px){
-    .flechas{
-        display: none;
-    }
-    .logo__container{
-        height: 10rem;
-        width: 10rem;
-    }
+  .flechas{
+    display: none;
+  }
+  .logo__container{
+    height: 10rem;
+    width: 10rem;
+  }
 }
 
 /*---------------------------------- Barra de navegación principal ----------------------------------*/
 
-.nav__list{
-    display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-    background: linear-gradient(to bottom, #cfc2b1, #dfd0bc);;
+.header__nav{
+  background: linear-gradient(to bottom, #e0a257, #dea766);
+  min-height: 4rem;
+  box-shadow: 0 0 4px #888;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.search__item{
-    border: 1px solid #f7941e;  
-    border-radius: 30px;
+.nav__list{
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+}
+
+@media screen and (max-width: 1280px){
+  /*.header__nav{
+    position: relative;
+    padding: 0;
+  }
+  .nav__list{
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding-left: 10px;
+  }
+  .nav__item:last-child{
+    order:-1;
+    align-self: center;
+  }
+  .details__list{
+    position: static;
+  }*/
+}
+
+.nav__item{
+  font-size: 1.2em;
+}
+.nav__item:hover{
+  cursor: pointer;
+  color: #666;
+}
+.nav__item:last-child{
+  text-shadow: none;
+}
+
+.nav__link{
+  text-decoration: none;
+}
+.nav__link:visited{
+  color: inherit;
+}
+
+.search__container{
+  border-radius: 25px;
+  background-color: #fff;
+  color: #555;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  box-shadow: 0 0 4px #888;
+}
+.search__container:hover{
+  text-shadow: none;
+}
+
+.search__input{
+  all: unset; 
+  border: none;
+  outline: none; 
+  background: transparent; 
+}
+.search__input::placeholder{
+  color: #999;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.search__button{
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.search__img{
+  height: auto;
+}
+
+/*---------------------------------- Menú desplegable ----------------------------------*/
+
+/*submenu*/
+.details__list{
+  list-style: none;
+  border-radius: 5px;
+  border-top: 3px solid #e3881d;
+  position: absolute;
+  background-color:#e8e8e8;
+  padding: 10px 40px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  box-shadow: 0 0 4px #888;
+}
+
+/*Arreglos estéticos al poner el mouse sobre el contenedor general*/
+.details:hover{
+  text-shadow: none;
+  cursor:default;
+}
+.summary:hover{
+  cursor: pointer;
+}
+
+/*------ Si puedo ocultar la flecha default aplicar estos estilos --------
+comentario(Flecha personalizada)
+.summary::after {
+  content: "▼";
+  font-size: 14px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+comentario(Rota la flecha cuando el menú está desplegado)
+.details[open] .summary::after {
+  transform: rotate(180deg);
+}
+*/
+
+
+.details__item{
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.item__link{
+  text-decoration: none;
+  color: #666; 
+}
+.item__link:hover{
+  color:#e3881d;
 }
