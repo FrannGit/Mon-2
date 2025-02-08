@@ -6,6 +6,7 @@ body{
   display: flex;
   flex-direction: column;
   overflow-y: scroll; /* Asegura que se pueda desplazar*/
+  box-sizing: border-box;
 }
 
 /* Ocultar la barra de scroll para navegadores modernos */
@@ -83,7 +84,7 @@ body::-webkit-scrollbar {
 /*---------------------------------- Barra de navegación principal ----------------------------------*/
 
 .header__nav{
-  background: linear-gradient(to bottom, #e0a257, #dea766);
+  background: linear-gradient(to bottom, #ddaa72, #e9b377);
   min-height: 4rem;
   box-shadow: 0 0 4px #888;
   position: sticky;
@@ -99,35 +100,21 @@ body::-webkit-scrollbar {
   color: #fff;
 }
 
-@media screen and (max-width: 1280px){
-  /*.header__nav{
-    position: relative;
-    padding: 0;
-  }
-  .nav__list{
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    padding-left: 10px;
-  }
-  .nav__item:last-child{
-    order:-1;
-    align-self: center;
-  }
-  .details__list{
-    position: static;
-  }*/
-}
-
 .nav__item{
   font-size: 1.2em;
+  transition: transform .5s ease, color .1s ease, border-bottom .5s ease;
 }
 .nav__item:hover{
   cursor: pointer;
   color: #666;
+  border-bottom: 2px solid #666;
+  transform: translateY(-3px);  
 }
-.nav__item:last-child{
-  text-shadow: none;
+
+/* A los nav items que sean menus desplegables no se les aplica los efectos de transición */
+.dropdown:hover{
+  border-bottom: none;
+  transform: none;  
 }
 
 .nav__link{
@@ -138,6 +125,7 @@ body::-webkit-scrollbar {
 }
 
 .search__container{
+  font-size: 1.2em;
   border-radius: 25px;
   background-color: #fff;
   color: #555;
@@ -146,9 +134,6 @@ body::-webkit-scrollbar {
   align-items: center;
   gap: 0px;
   box-shadow: 0 0 4px #888;
-}
-.search__container:hover{
-  text-shadow: none;
 }
 
 .search__input{
@@ -175,6 +160,25 @@ body::-webkit-scrollbar {
   height: auto;
 }
 
+@media screen and (max-width: 1280px){
+  .header__nav{
+    position: relative;
+    padding: 0;
+  }
+  .nav__list{
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding-left: 10px;
+  }
+  .details__list{
+    position: static;
+  }
+  .search__container{
+    order: -1;
+  }
+}
+
 /*---------------------------------- Menú desplegable ----------------------------------*/
 
 /*submenu*/
@@ -194,7 +198,6 @@ body::-webkit-scrollbar {
 
 /*Arreglos estéticos al poner el mouse sobre el contenedor general*/
 .details:hover{
-  text-shadow: none;
   cursor:default;
 }
 .summary:hover{
@@ -215,7 +218,6 @@ comentario(Rota la flecha cuando el menú está desplegado)
 }
 */
 
-
 .details__item{
   border-bottom: 1px solid #d4d4d4;
 }
@@ -226,4 +228,101 @@ comentario(Rota la flecha cuando el menú está desplegado)
 }
 .item__link:hover{
   color:#e3881d;
+}
+
+
+
+/*---------------------------------- Main ----------------------------------*/
+
+.main{
+  display: flex;
+  flex-direction: column;
+  background-color: #f3d5ae;
+}
+
+/*---------------------------------- Servicios ----------------------------------*/
+
+
+/* Imagenes de cada contenedor */
+.service--resonancia{
+  background: linear-gradient(rgba(0, 0, 0, .78), rgba(0, 0, 0, .78)), url("Imgs/Resonancia.jpg");
+}
+.service--tomografia{
+  background: linear-gradient(rgba(0, 0, 0, .78), rgba(0, 0, 0, .78)), url("Imgs/Tomografia.jpg");
+}
+.service--mamografia{
+  background: linear-gradient(rgba(0, 0, 0, .78), rgba(0, 0, 0, .78)), url("Imgs/Mamografia.jpg");
+}
+.service--ecografia{
+  background: linear-gradient(rgba(0, 0, 0, .78), rgba(0, 0, 0, .78)), url("Imgs/Ecografia.jpg");
+}
+.service--radiologia{
+  background: linear-gradient(rgba(0, 0, 0, .78), rgba(0, 0, 0, .78)), url("Imgs/Radiologia.jpg");
+}
+.service--densitometria{
+  background: linear-gradient(rgba(0, 0, 0, .78), rgba(0, 0, 0, .78)), url("Imgs/Densitometria.jpg");
+}
+
+.services{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.services__title{
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #875311;
+  text-shadow: 0 0 2px #999
+}
+
+.services__container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 50px;
+}
+
+.service{
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+  filter: drop-shadow(0 0 7px #bbb);
+  flex-shrink: 1;
+  width: 30%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fefaf6;
+}
+.service:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.5s ease, color 0.1s;
+  color: #e3881d;
+}
+
+.service__name{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 200;
+  font-style: italic;
+}
+
+@media (max-width:1280px) {
+  .service{
+    width: 45%;
+  }
+}
+
+@media (max-width:960px) {
+  .service{
+    width: 100%;
+  }
+  .services__container{
+    gap: 20px;
+  }
 }
