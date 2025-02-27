@@ -18,7 +18,7 @@ body::-webkit-scrollbar {
 /*---------------------------------- Presentacion de la página ----------------------------------*/
 
 .header{
-  background-image: url(Imgs/Turnos.jpg);
+  background-image: url(Imgs/Mon-Interior.jpg);
   flex-basis: 100vh;
   background-size: cover;
   background-position: bottom;
@@ -48,6 +48,7 @@ body::-webkit-scrollbar {
 }
 /*La imagen se ajusta a todo su contenedor*/
 .header__logo{
+  border-radius: 50%;
   width: 100%;
   height: 100%;
   filter: drop-shadow(0 0 7px #ec8d1d);
@@ -237,6 +238,7 @@ comentario(Rota la flecha cuando el menú está desplegado)
 .main{
   display: flex;
   flex-direction: column;
+  row-gap: 50px;
   background-color: #f3d5ae;
 }
 
@@ -286,32 +288,36 @@ comentario(Rota la flecha cuando el menú está desplegado)
 }
 
 .service{
+  /* Arreglo imagen de fondo */
   background-size: cover;
   background-position: center;
+  /* Aspectos visuales de la caja*/
   border-radius: 3px;
   filter: drop-shadow(0 0 7px #bbb);
+  color: #fefaf6;
+  /**/
   flex-shrink: 1;
+  /* Tamaño de las cajas */
   width: 30%;
   height: 250px;
-  color: #fefaf6;
-  border:2px solid red;
+  /* Texto interior */
+  text-decoration: none;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 1.7rem;
+  /* Alínea el texto interior */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .service:hover{
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(1.02);
   transition: transform 0.5s ease, color 0.1s;
   color: #e3881d;
 }
 
-.service__name{
-  border:2px solid blue;
-  width: 100%;
-  font-size: 2rem;
-  font-weight: 200;
-  font-style: italic;
-  text-decoration: none;
-  color: inherit;
-}
+
 
 @media (max-width:1280px) {
   .service{
@@ -325,5 +331,126 @@ comentario(Rota la flecha cuando el menú está desplegado)
   }
   .services__container{
     gap: 20px;
+  }
+}
+
+/*---------------------------------- Turnos ----------------------------------*/
+
+.turnos{
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("Imgs/Mon-Interior.jpg");
+  background-attachment: fixed;
+  background-size:cover;
+  background-position: bottom;
+
+  display: flex;
+  flex-direction: column;
+  
+  text-align: center;
+  color: #fff;
+}
+
+.turnos__titulo{
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ad6c19;
+  text-shadow: 0 0 3px #555;
+}
+
+.turnos__info{
+  text-wrap: wrap;
+  font-size: 1.57rem;
+  font-style: oblique;
+  font-weight: 300;
+  line-height: 2.5rem;
+  padding: 0 5%;
+  text-shadow: 0 0 2px #555;
+}
+
+
+/*---------------------------------- Portal Pacientes ----------------------------------*/
+
+.portal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portal__link:hover{
+  box-shadow: 0 0 5px #bcb;
+}
+
+@media (max-width: 1280px) {
+  .portal{
+    display: none;
+  }
+}
+
+/*---------------------------------- Footer ----------------------------------*/
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #8e8170;
+  color: #e6dfd4;
+}
+
+.footer__credencials{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.credencials__title{
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-shadow: 0 0 2px #555;
+}
+
+.credencials__img{
+  width: 150px;
+  filter: drop-shadow(0 0 5px #666);
+  margin-bottom: 10px;
+}
+
+.footer__social{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.social__img{
+  width: 40px;
+}
+
+.footer__location{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.location__title{
+  font-weight: 200;
+}
+
+.location__img{
+  width: 40px;
+  filter: drop-shadow(0 0 5px #666);
+}
+
+@media (max-width: 960px){
+  .footer{
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.2em;
+  }
+  .footer__location{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 }
